@@ -26,12 +26,13 @@ import people03 from "./people03.png";
 import service01 from "./service01.jpg";
 import service02 from "./service02.jpg";
 import service03 from "./service03.jpg";
-import user from "./user.svg"
-import userType from "./userType.svg"
-import userEmail from "./userEmail.svg"
-import userPswd from "./userPswd.svg"
-import userFilter from "./userFilter.svg"
-import about1 from "./about1.png"
+import user from "./user.svg";
+import userType from "./userType.svg";
+import userEmail from "./userEmail.svg";
+import userPswd from "./userPswd.svg";
+import userFilter from "./userFilter.svg";
+import about1 from "./about1.png";
+import hireus from "./hireus.jpg";
 
 export {
   airbnb,
@@ -68,4 +69,5 @@ export {
   userPswd,
   userFilter,
   about1,
+  hireus,
 };

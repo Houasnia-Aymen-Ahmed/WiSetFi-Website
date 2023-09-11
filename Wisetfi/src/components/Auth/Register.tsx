@@ -38,18 +38,18 @@ const Register = (
             <select
               value={selectedOption}
               onChange={handleOptionChange}
-              className=" w-full text-dimWhite p-1 rounded-[7px] bg-transparent border"
+              className=" py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white "
               id="client-type"
               name="client-type"
               required
             >
-              <option value="" disabled selected >
+              <option value="" disabled selected className="text-gray-400">
                 User Type
               </option>
-              <option className="text-black" value="Client">
+              <option className="text-white" value="Client">
                 Client
               </option>
-              <option className="text-black" value="Employee">
+              <option className="text-white" value="Employee">
                 Employee
               </option>
             </select>
@@ -58,17 +58,22 @@ const Register = (
             <div className="w-full flex flex-row gap-3 items-center">
               <img src={userFilter} alt="" className="w-[30px] h-[30px]" />
               <select
-                className=" w-full text-dimWhite p-1 rounded-[7px] bg-transparent border "
+                className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white "
                 id="client-category"
                 name="client-category"
               >
-                <option value="Client Type" disabled selected >
+                <option
+                  value="Client Type"
+                  disabled
+                  selected
+                  className="text-gray-400"
+                >
                   Client Type
                 </option>
-                <option className="text-black" value="Individual">
+                <option className="text-white" value="Individual">
                   Individual
                 </option>
-                <option className="text-black" value="Organization">
+                <option className="text-white" value="Organization">
                   Organization
                 </option>
               </select>
