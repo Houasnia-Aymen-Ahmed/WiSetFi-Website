@@ -3,7 +3,8 @@ import { Footer, NavBar } from "../utils";
 import { info } from "../constants";
 import { useEffect, useState } from "react";
 import HirePlaceHolder from "./Contact/HirePlaceHolder";
-import { hireus } from "../assets";
+import FeedbackPlaceHolder from "./Contact/FeedbackPlaceHolder";
+import { feedbackContact, hireus } from "../assets";
 /* import TrackingSystem from "../utils/TrackingSystem"; */
 
 const Contact = () => {
@@ -30,12 +31,14 @@ const Contact = () => {
 
   return (
     <div className="bg-gradient-to-r from-[#304a6c] to to-[#163759] w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div
+        className={`fixed w-full z-[999] ${styles.paddingX} ${styles.flexCenter}`}
+      >
         <div className={`${styles.boxWidth}`}>
           <NavBar />
         </div>
       </div>
-      <div className={`my-20 ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={`mt-40 ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           {/* <TrackingSystem /> */}
           <div
@@ -59,11 +62,14 @@ const Contact = () => {
               }`}
             >
               {info.map((item) => (
-                <div key={item.id} className="p-5">
+                <div
+                  key={item.id}
+                  className="p-5 flex flex-row sm:flex-col gap-4"
+                >
                   <h4 className="font-poppins font-semibold sm:text-[25px] text-[15px] xs:leading-[25px] leading-[20px] text-gradient uppercase text-center ">
                     {item.title}
                   </h4>
-                  <p className="font-poppins font-normal sm:text-[25px] text-[15px] xs:leading-[55px] leading-[45px] text-white text-center">
+                  <p className="font-poppins font-normal sm:text-[25px] text-[15px] xs:leading-[25x] leading-[20px] text-white text-center">
                     {item.value}
                   </p>
                 </div>
@@ -72,15 +78,16 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className={` my-20 ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={` my-40 ${styles.paddingX} ${styles.flexStart}`}>
         <div
           className={` ${styles.boxWidth} flex flex-col md:flex-row-reverse items-center justify-between gap-10
            `}
         >
           <div
+            style={{ backgroundImage: `url(${hireus})` }}
             className={` ${
               flexDirection === "row" ? "md:w-1/2" : "h-[300px]"
-            }  self-stretch bg-no-repeat bg-cover rounded-[15px] bg-[url('${hireus}')]`}
+            } self-stretch bg-no-repeat bg-cover rounded-[15px]`}
           >
             <div className="w-full h-full flex flex-col items-center justify-center backdrop-blur-sm bg-black/40 rounded-[15px] ">
               <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
@@ -92,7 +99,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mt-12 md:w-1/2 self-stretch ">
+          <div className="mt-12 md:mt-0 md:w-1/2 self-stretch ">
             <form>
               <div className="grid gap-4 lg:gap-6">
                 <HirePlaceHolder />
@@ -109,6 +116,51 @@ const Contact = () => {
               <div className="mt-3 text-center">
                 <p className="text-sm text-gray-400">
                   We'll get back to you in 1-2 business days.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div className={` my-40 ${styles.paddingX} ${styles.flexStart}`}>
+        <div
+          className={` ${styles.boxWidth} flex flex-col md:flex-row items-center justify-between gap-10
+           `}
+        >
+          <div
+            style={{ backgroundImage: `url(${feedbackContact})` }}
+            className={` ${
+              flexDirection === "row" ? "md:w-1/2" : "h-[300px]"
+            }  self-stretch bg-no-repeat bg-cover rounded-[15px] `}
+          >
+            <div className="w-full h-full flex flex-col items-center justify-center backdrop-blur-sm bg-black/40 rounded-[15px] ">
+              <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
+                We care about your feedbacks
+              </h1>
+              <p className="mt-1 text-slate-200">
+                Take a moment to help us improve
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 md:mt-0 md:w-1/2 self-stretch ">
+            <form>
+              <div className="grid gap-4 lg:gap-6">
+                <FeedbackPlaceHolder />
+              </div>
+
+              <div className="mt-6 grid">
+                <button
+                  type="submit"
+                  className="inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+                >
+                  Send
+                </button>
+              </div>
+              <div className="mt-3 text-center">
+                <p className="text-sm text-gray-400">
+                  Thank you for helping us, your review will be taken into
+                  consideration
                 </p>
               </div>
             </form>
