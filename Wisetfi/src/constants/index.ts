@@ -13,16 +13,18 @@ import {
   binance,
   coinbase,
   dropbox,
-  send,
-  shield,
-  star,
   about1,
   user,
   userEmail,
   userPswd,
 } from "../assets";
 import { layout } from "../style";
-import { faFontAwesome } from "@fortawesome/free-solid-svg-icons/faFontAwesome";
+import {
+  faFontAwesome,
+  faStar,
+  faCreditCard,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const navLinks = [
   {
@@ -50,7 +52,7 @@ export const navLinks = [
 export const features = [
   {
     id: "feature-1",
-    icon: star,
+    icon: faStar,
     title: "Commitment to Innovation",
     content:
       "WiSetFi emphasizes its commitment to staying up-to-date with the latest technological advancements in the WIFI industry.\
@@ -59,7 +61,7 @@ export const features = [
   },
   {
     id: "feature-2",
-    icon: shield,
+    icon: faCreditCard,
     title: "Cost-Effective Solutions",
     content:
       "WiSetFi takes pride in offering cost-effective services without compromising quality or reliability. They understand the \
@@ -68,7 +70,7 @@ export const features = [
   },
   {
     id: "feature-3",
-    icon: send,
+    icon: faPaperPlane,
     title: "Building Lasting Relationships",
     content:
       "WiSetFi aims to build lasting relationships with their clients. They strive to exceed client expectations by providing reliable \
