@@ -1,6 +1,6 @@
 import React from "react";
-import { layout } from "../style";
-import styles from "../style";
+import { layout } from "../../style";
+import styles from "../../style";
 
 interface AboutCrdProps {
   title: string;

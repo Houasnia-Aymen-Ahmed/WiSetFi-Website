@@ -1,7 +1,7 @@
 import { NavBar, Footer, Testimonials, Cta } from "../utils";
 import styles from "../style";
 import { about } from "../constants";
-import AboutCrd from "../utils/AboutCrd";
+import AboutCrd from "../utils/cards/AboutCrd";
 
 const About = () => {
   return (

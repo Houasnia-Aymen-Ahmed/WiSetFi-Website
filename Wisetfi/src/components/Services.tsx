@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import styles from "../style";
 import { Footer, NavBar } from "../utils";
-import ServiceCard from "../utils/ServiceCard";
-import { services } from "../constants";
+import ServiceCard from "../utils/cards/ServiceCard";
+
 const Services = () => (
   <div className="bg-gradient-to-r from-[#304a6c] to to-[#163759] w-full overflow-hidden">
     <div
@@ -12,11 +12,9 @@ const Services = () => (
         <NavBar />
       </div>
     </div>
-    <div className={` mt-40 ${styles.flexCenter}`}>
+    <div className={` mt-40 ${styles.flexCenter} ${styles.paddingX} `}>
       <div className={`${styles.boxWidth}`}>
-        <section
-          className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
-        >
+        <section className={`${styles.paddingY} `}>
           <div className="w-full flex justify-center items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
             <h2 className={` flex justify-center ${styles.heading2}`}>
               Our Services
@@ -29,10 +27,11 @@ const Services = () => (
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap justify-between w-full relative z-[1]">
-            {services.map((card) => (
+          <div className="flex flex-wrap justify-between relative z-[1]">
+            <ServiceCard />
+            {/* {services.map((card) => (
               <ServiceCard key={card.id} {...card} />
-            ))}
+            ))} */}
           </div>
         </section>
       </div>
