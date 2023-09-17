@@ -2,15 +2,7 @@ import React from "react";
 import { layout } from "../../style";
 import styles from "../../style";
 
-interface AboutCrdProps {
-  title: string;
-  content: string;
-  img: string;
-  style: string;
-  styleimg: string;
-}
-
-const AboutCrd: React.FC<AboutCrdProps> = ({
+const AboutCrd = ({
   title,
   content,
   img,

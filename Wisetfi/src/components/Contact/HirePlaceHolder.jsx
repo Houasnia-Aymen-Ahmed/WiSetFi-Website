@@ -2,7 +2,7 @@ import React from "react";
 import { hirePlaceHolders } from "../../constants";
 
 const HirePlaceHolder = () => {
-  const placeHolder = (val1: number, val2: number) => {
+  const placeHolder = (val1, val2) => {
     return hirePlaceHolders
       .filter((_, index) => index === val1 || index === val2)
       .map((item) => {

@@ -5,21 +5,18 @@ import InputPlaceHolder from "./InputPlaceHolder";
 import { placeholders } from "../../constants";
 
 const Register = (
-  translateLogin: boolean,
-  selectedOption: string,
-  handleOptionChange: (event: {
-    target: { value: React.SetStateAction<string> };
-  }) => void,
-  handleSignInClick: (event: { preventDefault: () => void }) => void
-): React.ReactNode => {
+  translateLogin,
+  selectedOption,
+  handleOptionChange,
+  handleSignInClick
+) => {
   return (
     <div
       id="register"
-      className={`${
-        translateLogin
+      className={`${translateLogin
           ? " transform translate-x-[100%] opacity-0"
           : "transform translate-x-[0%] opacity-[100%] "
-      } transition-all duration-1000 ease-in-out font-poppins text-white glass-blurred rounded-[20px] p-5 xg:w-[75%] xgg:w-[65%] w-[85%] flex justify-center z-[100] `}
+        } transition-all duration-1000 ease-in-out font-poppins text-white glass-blurred rounded-[20px] p-5 xg:w-[75%] xgg:w-[65%] w-[85%] flex justify-center z-[100] `}
     >
       <form
         action="register"

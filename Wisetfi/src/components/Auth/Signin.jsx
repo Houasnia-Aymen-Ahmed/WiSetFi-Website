@@ -4,17 +4,16 @@ import { user, userPswd } from "../../assets";
 import InputPlaceHolder from "./InputPlaceHolder";
 
 function Signin(
-  translateLogin: boolean,
-  handleCreateOneClick: (event: { preventDefault: () => void }) => void
-): React.ReactNode {
+  translateLogin,
+  handleCreateOneClick
+) {
   return (
     <div
       id="login"
-      className={`${
-        translateLogin
+      className={`${translateLogin
           ? "transform translate-x-[0%] opacity-[100%]"
           : "transform translate-x-[100%] opacity-0 "
-      } transition-all duration-1000 ease-in-out font-poppins text-white glass-blurred rounded-[20px] p-5 xg:w-[75%] xgg:w-[65%] w-[85%] flex z-[100] `}
+        } transition-all duration-1000 ease-in-out font-poppins text-white glass-blurred rounded-[20px] p-5 xg:w-[75%] xgg:w-[65%] w-[85%] flex z-[100] `}
     >
       <form
         action="register"

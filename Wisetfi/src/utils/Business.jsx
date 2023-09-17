@@ -7,7 +7,7 @@ import {
   faCreditCard,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-import axios from "../utils/api/axios";
+import axios from "./api/axios";
 import { useState, useEffect } from "react";
 
 const FeatureCard = () => {

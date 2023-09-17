@@ -6,21 +6,19 @@ import { Description, Signin, Register } from "./Auth";
 
 const Authenticate = () => {
   const [selectedOption, setSelectedOption] = useState("");
-  const handleOptionChange = (event: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
+  const handleOptionChange = () => {
     setSelectedOption(event.target.value);
   };
   const [showLogin, setShowLogin] = useState(true);
   const [translateLogin, settranslateLogin] = useState(true);
-  const handleCreateOneClick = (event: { preventDefault: () => void }) => {
+  const handleCreateOneClick = () => {
     event.preventDefault();
     settranslateLogin(false);
     setTimeout(() => {
       setShowLogin(false);
     }, 1000);
   };
-  const handleSignInClick = (event: { preventDefault: () => void }) => {
+  const handleSignInClick = () => {
     event.preventDefault();
     settranslateLogin(true);
     setTimeout(() => {
