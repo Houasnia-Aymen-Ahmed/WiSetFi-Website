@@ -18,7 +18,7 @@ const AboutCrd: React.FC<AboutCrdProps> = ({
   styleimg,
 }) => {
   return (
-    <section className={style}>
+    <section className={` my-20 ${style}`}>
       {style === layout.sectionReverse && (
         <div className={styleimg}>
           <img

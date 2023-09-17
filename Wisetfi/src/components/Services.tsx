@@ -4,13 +4,15 @@ import { Footer, NavBar } from "../utils";
 import ServiceCard from "../utils/ServiceCard";
 import { services } from "../constants";
 const Services = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+  <div className="bg-gradient-to-r from-[#304a6c] to to-[#163759] w-full overflow-hidden">
+    <div
+      className={`fixed w-full z-[999] ${styles.paddingX} ${styles.flexCenter}`}
+    >
       <div className={`${styles.boxWidth}`}>
         <NavBar />
       </div>
     </div>
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={` mt-40 ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <section
           className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
@@ -27,7 +29,7 @@ const Services = () => (
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap sm:justify-center justify-center w-full feedback-container relative z-[1]">
+          <div className="flex flex-wrap justify-between w-full relative z-[1]">
             {services.map((card) => (
               <ServiceCard key={card.id} {...card} />
             ))}

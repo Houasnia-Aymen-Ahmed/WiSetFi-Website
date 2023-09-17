@@ -25,7 +25,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className={` ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={` my-20 ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <div className="w-full">
             {about.map((abt) => (
@@ -34,7 +34,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className={`${styles.paddingX} ${styles.flexStart}`}>
+      <div className={` my-20 ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Testimonials />
           <Cta />
