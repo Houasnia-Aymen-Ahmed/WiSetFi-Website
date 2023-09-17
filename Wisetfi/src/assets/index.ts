@@ -33,6 +33,7 @@ import userPswd from "./userPswd.svg";
 import userFilter from "./userFilter.svg";
 import about1 from "./about1.png";
 import hireus from "./hireus.jpg";
+import feedbackContact from "./feedbackContact.jpg";
 
 export {
   airbnb,
@@ -70,4 +71,5 @@ export {
   userFilter,
   about1,
   hireus,
+  feedbackContact,
 };

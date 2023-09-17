@@ -170,3 +170,7 @@
 .tooltip:hover + .tooltip-text {
   @apply  block ;
 }
+
+.bgImage{
+  @apply bg-[]
+}
