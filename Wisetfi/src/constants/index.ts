@@ -378,3 +378,48 @@ export const tracker = [
     state: 0,
   },
 ];
+
+export const hirePlaceHolders = [
+  {
+    id: "hirePlaceHolder-1",
+    name: "hs-firstname-hire-us-2",
+    content: "First Name",
+    type: "text",
+    required: true,
+  },
+  {
+    id: "hirePlaceHolder-2",
+    name: "hs-lastname-hire-us-2",
+    content: "Last Name",
+    type: "text",
+    required: true,
+  },
+  {
+    id: "hirePlaceHolder-3",
+    name: "hs-work-email-hire-us-2",
+    content: "Work Name",
+    type: "email",
+    required: true,
+  },
+  {
+    id: "hirePlaceHolder-4",
+    name: "hs-company-hire-us-2",
+    content: "Company",
+    type: "text",
+    required: false,
+  },
+  {
+    id: "hirePlaceHolder-5",
+    name: "hs-company-phone-hire-us-2",
+    content: "Company Phone",
+    type: "tel",
+    required: false,
+  },
+  {
+    id: "hirePlaceHolder-6",
+    name: "hs-details-hire-us-2",
+    content: "Details",
+    type: "text",
+    required: true,
+  },
+];
