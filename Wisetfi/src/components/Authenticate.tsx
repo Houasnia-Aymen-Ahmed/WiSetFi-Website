@@ -65,7 +65,7 @@ const Authenticate = () => {
                         transition={{ type: "spring", stiffness: 260, damping: 20 }}
                         className="w-full flex justify-center"
                       >
-                        {Register(false, selectedOption, handleOptionChange as any, handleSignInClick)}
+                        {Register(false, selectedOption, handleOptionChange, handleSignInClick)}
                       </motion.div>
                     )}
                   </AnimatePresence>
