@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import styles from "../style";
 import {
   Business,
@@ -10,16 +9,18 @@ import {
 } from "../utils";
 
 const Home = () => (
-  <div className=" bg-gradient-to-r from-[#304a6c] to to-[#163759] w-full overflow-hidden">
-    <div
-      className={`fixed w-full z-[999] ${styles.paddingX} ${styles.flexCenter}`}
-    >
+  <div className="bg-[#00040f] w-full overflow-hidden min-h-screen relative">
+    {/* Background gradients for atmosphere */}
+    <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient" />
+    <div className="absolute z-[0] w-[40%] h-[40%] -left-[20%] top-0 pink__gradient" />
+
+    <div className={`w-full z-[999] ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <NavBar />
       </div>
     </div>
 
-    <div className={`mt-40 ${styles.flexStart}`}>
+    <div className={`mt-10 ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <Hero />
       </div>
@@ -35,4 +36,5 @@ const Home = () => (
     </div>
   </div>
 );
+
 export default Home;

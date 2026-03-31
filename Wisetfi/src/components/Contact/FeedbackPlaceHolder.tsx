@@ -5,8 +5,8 @@ const FeedbackPlaceHolder = () => {
     <React.Fragment>
       <div>
         <label
-          htmlFor="hs-fullname-feedback-2"
-          className="block text-sm text-gray-700 font-medium dark:text-white"
+          htmlFor="Fullname"
+          className="block text-sm font-medium text-white mb-2"
         >
           Full name
         </label>
@@ -15,13 +15,13 @@ const FeedbackPlaceHolder = () => {
           name="Fullname"
           id="Fullname"
           required
-          className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white"
+          className="py-3 px-4 block w-full bg-transparent border border-white/10 rounded-xl text-sm focus:border-secondary focus:ring-1 focus:ring-secondary text-white glass-morphism transition-all duration-300 placeholder:text-gray-500 outline-none"
         />
       </div>
       <div>
         <label
-          htmlFor="hs-email-feedback-2"
-          className="block text-sm text-gray-700 font-medium dark:text-white"
+          htmlFor="Email"
+          className="block text-sm font-medium text-white mb-2"
         >
           Email
         </label>
@@ -30,20 +30,21 @@ const FeedbackPlaceHolder = () => {
           name="Email"
           id="Email"
           required
-          className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white"
+          className="py-3 px-4 block w-full bg-transparent border border-white/10 rounded-xl text-sm focus:border-secondary focus:ring-1 focus:ring-secondary text-white glass-morphism transition-all duration-300 placeholder:text-gray-500 outline-none"
         />
       </div>
       <div>
         <label
-          htmlFor="hs-message-feedback-2"
-          className="block text-sm text-gray-700 font-medium dark:text-white"
+          htmlFor="FeedbackMessage"
+          className="block text-sm font-medium text-white mb-2"
         >
           Feedback
         </label>
         <textarea
           id="FeedbackMessage"
           name="FeedbackMessage"
-          className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white"
+          rows={4}
+          className="py-3 px-4 block w-full bg-transparent border border-white/10 rounded-xl text-sm focus:border-secondary focus:ring-1 focus:ring-secondary text-white glass-morphism transition-all duration-300 placeholder:text-gray-500 outline-none"
         ></textarea>
       </div>
     </React.Fragment>

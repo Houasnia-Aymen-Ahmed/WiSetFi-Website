@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
@@ -18,18 +19,21 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   content,
   index,
 }) => (
-  <div
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ delay: index * 0.1 }}
+    viewport={{ once: true }}
     className={`flex flex-row p-6 rounded-[20px] ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
-    } feature-card`}
+    } glass-morphism hover:bg-black-gradient transition-all duration-300 cursor-pointer`}
   >
     <div
-      id="img"
-      className={` hidden xs:flex w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-[#163759] md:bg-[#304a6c] `}
+      className={`hidden xs:flex w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-[#163759]`}
     >
       <FontAwesomeIcon
         icon={icon}
-        className="w-[50%] h-[50%] object-contain text-[#304a6c] md:text-[#163759]  "
+        className="w-[50%] h-[50%] object-contain text-secondary"
       />
     </div>
     <div className="flex-1 flex flex-col ml-3">
@@ -40,24 +44,28 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         {content}
       </p>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Business = () => (
   <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
-      <h2 className="font-poppins font-semibold xs:text-[45x] text-[40px] text-white xs:leading-[75px] leading-[65px] w-full">
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className={layout.sectionInfo}
+    >
+      <h2 className="font-poppins font-semibold xs:text-[45px] text-[40px] text-white xs:leading-[75px] leading-[65px] w-full">
         “You focus on connections,
         <br className="sm:block hidden" /> we&apos;ll install the perfection.”
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         With the right network installation company, you can enhance your
-        connectivity, ensure stable WiFi, and save time. But with numerous
-        service providers in the market, choosing us ensures you get top-notch
-        service and peace of mind.
+        connectivity, ensure stable WiFi, and save time. Choosing WiSetFi ensures
+        you get top-notch service and peace of mind.
       </p>
       <Button styles={`mt-10`} />
-    </div>
+    </motion.div>
 
     <div className={`${layout.sectionImg} flex-col`}>
       {features.map((feature, index) => (

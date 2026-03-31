@@ -17,27 +17,31 @@ const AboutCrd: React.FC<AboutCrdProps> = ({
   style,
   styleimg,
 }) => {
+  const isReverse = style.includes("flex-col-reverse");
+
   return (
-    <section className={` my-20 ${style}`}>
-      {style === layout.sectionReverse && (
-        <div className={styleimg}>
+    <section className={`my-20 ${style} items-center gap-10`}>
+      {isReverse && (
+        <div className={`${styleimg} glass-morphism p-2 rounded-3xl`}>
           <img
             src={img}
             alt={title}
-            className="w-[100%] h-[100%] rounded-3xl relative z-[5]"
+            className="w-full h-full rounded-[20px] relative z-[5] object-cover"
           />
         </div>
       )}
+
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>{title}</h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>{content}</p>
       </div>
-      {style === layout.section && (
-        <div className={layout.sectionImg}>
+
+      {!isReverse && (
+        <div className={`${layout.sectionImg} glass-morphism p-2 rounded-3xl`}>
           <img
             src={img}
-            alt="billing"
-            className="w-[100%] h-[100%] rounded-3xl relative z-[5]"
+            alt={title}
+            className="w-full h-full rounded-[20px] relative z-[5] object-cover"
           />
         </div>
       )}

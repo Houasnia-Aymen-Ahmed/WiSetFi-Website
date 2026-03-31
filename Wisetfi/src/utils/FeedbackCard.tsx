@@ -1,6 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { quotes } from "../assets";
-import PropTypes from "prop-types"
 
 interface FeedbackCardProps {
   content: string;
@@ -15,7 +15,10 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
   title,
   img,
 }) => (
-  <div className="flex justify-between flex-col px-10 py-12 rounded-[20px]  max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 glass-morphism cursor-pointer transition-all duration-300"
+  >
     <img
       src={quotes}
       alt="double_quotes"
@@ -26,7 +29,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
     </p>
 
     <div className="flex flex-row">
-      <img src={img} alt={name} className="w-[48px] h-[48px] rounded-full" />
+      <img src={img} alt={name} className="w-[48px] h-[48px] rounded-full border-2 border-secondary" />
       <div className="flex flex-col ml-4">
         <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-white">
           {name}
@@ -36,14 +39,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
         </p>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
-
-FeedbackCard.propTypes = {
-  content: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  img: PropTypes.any.isRequired,
-}
 
 export default FeedbackCard;
