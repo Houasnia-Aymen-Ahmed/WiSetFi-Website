@@ -2,49 +2,51 @@ import React from "react";
 import { hirePlaceHolders } from "../../constants";
 
 const HirePlaceHolder = () => {
-  const placeHolder = (val1: number, val2: number) => {
-    return hirePlaceHolders
-      .filter((_, index) => index === val1 || index === val2)
-      .map((item) => {
-        return (
-          <div key={item.id}>
-            <label
-              htmlFor={item.name}
-              className="block text-sm text-gray-700 font-medium dark:text-white"
-            >
-              {item.content}
-            </label>
-            {item.content !== "Details" ? (
-              <input
-                type={item.type}
-                name={item.name}
-                id={item.name}
-                required={item.required}
-                placeholder={item.required === false ? `( Optional )` : ``}
-                className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white"
-              />
-            ) : (
-              <textarea
-                id="hs-about-hire-us-2"
-                name="hs-about-hire-us-2"
-                className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 text-white"
-              ></textarea>
-            )}
-          </div>
-        );
-      });
+  const renderItem = (index: number) => {
+    const item = hirePlaceHolders[index];
+    if (!item) return null;
+
+    return (
+      <div key={item.id} className="w-full">
+        <label
+          htmlFor={item.name}
+          className="block text-sm font-medium text-white mb-2"
+        >
+          {item.content}
+        </label>
+        {item.content !== "Details" ? (
+          <input
+            type={item.type}
+            name={item.name}
+            id={item.name}
+            required={item.required}
+            placeholder={item.required === false ? `( Optional )` : ``}
+            className="py-3 px-4 block w-full bg-transparent border border-white/10 rounded-xl text-sm focus:border-secondary focus:ring-1 focus:ring-secondary text-white glass-morphism transition-all duration-300 placeholder:text-gray-500 outline-none"
+          />
+        ) : (
+          <textarea
+            id="hs-about-hire-us-2"
+            name="hs-about-hire-us-2"
+            rows={4}
+            className="py-3 px-4 block w-full bg-transparent border border-white/10 rounded-xl text-sm focus:border-secondary focus:ring-1 focus:ring-secondary text-white glass-morphism transition-all duration-300 placeholder:text-gray-500 outline-none"
+          ></textarea>
+        )}
+      </div>
+    );
   };
 
   return (
     <React.Fragment>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-        {placeHolder(0, 1)}
+        {renderItem(0)}
+        {renderItem(1)}
       </div>
-      <div>{placeHolder(2, 2)}</div>
+      <div>{renderItem(2)}</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-        {placeHolder(3, 4)}
+        {renderItem(3)}
+        {renderItem(4)}
       </div>
-      <div>{placeHolder(5, 5)}</div>
+      <div>{renderItem(5)}</div>
     </React.Fragment>
   );
 };

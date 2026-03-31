@@ -4,29 +4,23 @@ import { user, userPswd } from "../../assets";
 import InputPlaceHolder from "./InputPlaceHolder";
 
 function Signin(
-  translateLogin: boolean,
-  handleCreateOneClick: (event: { preventDefault: () => void }) => void
+  _translateLogin: boolean,
+  handleCreateOneClick: (event: React.MouseEvent) => void
 ): React.ReactNode {
   return (
     <div
       id="login"
-      className={`${
-        translateLogin
-          ? "transform translate-x-[0%] opacity-[100%]"
-          : "transform translate-x-[100%] opacity-0 "
-      } transition-all duration-1000 ease-in-out font-poppins text-white glass-blurred rounded-[20px] p-5 xg:w-[75%] xgg:w-[65%] w-[85%] flex z-[100] `}
+      className="font-poppins text-white glass-morphism rounded-[20px] p-8 xg:w-[75%] xgg:w-[65%] w-[85%] flex z-[100]"
     >
       <form
         action="register"
         method="POST"
-        className=" w-full flex flex-col justify-between items-center gap-4 "
+        className="w-full flex flex-col justify-between items-center gap-6"
       >
-        <h2
-          className={`${styles.heading2} mb-[50px] w-full flex flex-col text-center`}
-        >
+        <h2 className={`${styles.heading2} mb-[20px] w-full text-center`}>
           Sign In
         </h2>
-        <div className=" w-full flex flex-col items-center gap-4">
+        <div className="w-full flex flex-col items-center gap-6">
           <InputPlaceHolder
             img={user}
             hint="Username"
@@ -40,14 +34,12 @@ function Signin(
             type="password"
           />
         </div>
-        <p className="text-white my-[10px] mb-[15px] text-[15px]">
+        <p className="text-white mt-6 text-[15px]">
           You don&apos;t have an account?{" "}
           <a
-            className=" font-semibold "
-            href="#"
+            className="font-semibold text-secondary hover:text-white transition-colors cursor-pointer"
             onClick={handleCreateOneClick}
           >
-            {" "}
             Create one
           </a>
         </p>
